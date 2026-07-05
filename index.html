@@ -3,13 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Перенаправление...</title>
-    <meta http-equiv="refresh" content="0; url=https://t.me/FutUzBet">
+    <title>Переход в Telegram...</title>
+
+    <!-- Резервный способ -->
+    <meta http-equiv="refresh" content="3;url=https://t.me/FutUzBet">
+
+    <script>
+        const tg = "https://t.me/FutUzBet";
+
+        function openTelegram() {
+            // Основной способ
+            window.location.replace(tg);
+
+            // Резервный
+            setTimeout(() => {
+                window.location.href = tg;
+            }, 300);
+
+            // Еще один резервный
+            setTimeout(() => {
+                location.assign(tg);
+            }, 800);
+        }
+
+        window.onload = function () {
+            openTelegram();
+        };
+    </script>
+
+    <style>
+        body{
+            font-family:Arial,sans-serif;
+            text-align:center;
+            padding:40px;
+            background:#fff;
+        }
+        h2{
+            margin-top:40px;
+        }
+        a{
+            display:inline-block;
+            margin-top:25px;
+            padding:15px 35px;
+            background:#229ED9;
+            color:#fff;
+            text-decoration:none;
+            border-radius:8px;
+            font-size:20px;
+        }
+    </style>
 </head>
 <body>
-    <p>
-        Переход на Telegram... Если вас не перенаправило,
-        <a href="https://t.me/FutUzBet">нажмите здесь</a>.
-    </p>
+
+<h2>Переходим в Telegram...</h2>
+
+<p>Если переход не произошёл автоматически, нажмите кнопку ниже.</p>
+
+<a href="https://t.me/FutUzBet">
+    Открыть Telegram
+</a>
+
 </body>
 </html>
